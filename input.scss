@@ -1,0 +1,39 @@
+:root {
+	--r: 128;
+	--g: 128;
+	--b: 128;
+}
+
+body {
+	background: rgb(var(--r), var(--g), var(--b));
+}
+
+body, .color-picker {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	
+	.rgb-sliders, .color-picker {
+		background: white;
+		margin: 10vh;
+		padding: 15px;
+		border-radius: 14px;
+
+		.color {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 20px;
+		}
+		
+		.result {
+			padding: 25px;
+            color: #666;
+            display: flex;
+            flex-direction: column;
+        }
+        
+	}
+
+}
