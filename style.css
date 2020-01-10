@@ -7,28 +7,26 @@
 
 body {
   background: rgb(var(--r), var(--g), var(--b));
-}
-
-body, .color-picker {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   font-family: "Fredoka One", cursive;
 }
-body .rgb-sliders, body .color-picker, .color-picker .rgb-sliders, .color-picker .color-picker {
+
+.rgb-sliders {
   background: white;
   margin: 10vh;
   padding: 15px;
   border-radius: 14px;
 }
-body .rgb-sliders .color, body .color-picker .color, .color-picker .rgb-sliders .color, .color-picker .color-picker .color {
+.rgb-sliders .color-slider {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
 }
-body .rgb-sliders .result, body .color-picker .result, .color-picker .rgb-sliders .result, .color-picker .color-picker .result {
+.rgb-sliders .result {
   padding: 25px;
   color: #666;
   display: flex;
