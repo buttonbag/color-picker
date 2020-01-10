@@ -4,6 +4,8 @@
 	--b: 128;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One&display=swap');
+
 body {
 	background: rgb(var(--r), var(--g), var(--b));
 }
@@ -12,7 +14,8 @@ body, .color-picker {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-direction: column;
+    flex-direction: column;
+    font-family: 'Fredoka One', cursive;
 	
 	.rgb-sliders, .color-picker {
 		background: white;
