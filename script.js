@@ -13,21 +13,10 @@ function updateColor() {
 	const inputResults = document.querySelector(`input[type=number].${this.name}`);
     inputResults.value = `${this.value}`;
     
-    slider[0].value = textInput[0].value;
-    slider[1].value = textInput[1].value;
-    slider[2].value = textInput[2].value;
-}
-
-function updateSlider() {
-    console.log(this.name, this.value);
-	document.documentElement.style.setProperty(`--${this.name}`, this.value);
-	
-	// const inputResults = document.querySelector(`input.${this.name}`);
-    // inputResults.value = `${this.value}`;
-    
-    const inputResults = document.querySelector(`input[type=range].${this.name}`);
-    inputResults.value = `${this.value}`;
-    
+    //updates slider value after typing in field
+    for(i=0; i<3; i++) {
+        slider[i].value = textInput[i].value;
+    }
 }
 
 // function customPicker() {
