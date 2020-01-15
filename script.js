@@ -14,7 +14,7 @@ function updateColor() {
     inputResults.value = `${this.value}`;
     
     //updates slider value after typing in field
-    for(i=0; i<3; i++) {
+    for(i=0; i<slider.length; i++) {
         slider[i].value = textInput[i].value;
     }
 }
