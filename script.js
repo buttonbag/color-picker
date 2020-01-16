@@ -13,6 +13,7 @@ function updateColor() {
 	for (let i = 0; i < sliders.length; i++) {
 		sliders[i].value = inputs[i].value;
 	}
+
 }
 
 // function customPicker() {
@@ -27,5 +28,3 @@ inputs.forEach( input => input.addEventListener('input', updateColor) );
 // picker.forEach( picker => picker.addEventListener('change', customPicker) );
 
 // todo
-// add a way to type in number values
-	
