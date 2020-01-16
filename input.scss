@@ -2,38 +2,59 @@
 	--r: 128;
 	--g: 128;
 	--b: 128;
+
+	--rounded: 4px;
+	--padding: 15px;
 }
 
 body {
 	background: rgb(var(--r), var(--g), var(--b));
 }
 
-body, .color-picker {
+body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 	
-	.rgb-sliders, .color-picker {
+	.rgb-sliders, .inputs {
 		background: white;
-		margin: 10vh;
-		padding: 15px;
-		border-radius: 14px;
+		margin: 10px auto;
+		padding: var(--padding);
+		border-radius: var(--rounded);
 
 		.color {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			padding: 20px;
+			padding: var(--padding);
 		}
 		
-		.result {
-			padding: 25px;
-            color: #666;
-            display: flex;
-            flex-direction: column;
-        }
-        
 	}
+        
+	// .inputs {
+	// 	padding: var(--padding);
+	// 	background: white;
 
+	// 	color: #666;
+	// 	display: flex;
+	// 	flex-direction: column;
+		
+	// }
+	
+	// input styles
+	// remove number input arrows
+	input[type=number]::-webkit-inner-spin-button, 
+	input[type=number]::-webkit-outer-spin-button { 
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		margin: 0; 
+	}
+	input[type="number"] {
+		-moz-appearance: textfield;
+		border: 0;
+		border-bottom: 1px solid #333;
+		width: 35px;
+	}
 }

@@ -2,35 +2,44 @@
   --r: 128;
   --g: 128;
   --b: 128;
+  --rounded: 4px;
+  --padding: 15px;
 }
 
 body {
   background: rgb(var(--r), var(--g), var(--b));
 }
 
-body, .color-picker {
+body {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-body .rgb-sliders, body .color-picker, .color-picker .rgb-sliders, .color-picker .color-picker {
+body .rgb-sliders, body .inputs {
   background: white;
-  margin: 10vh;
-  padding: 15px;
-  border-radius: 14px;
+  margin: 10px auto;
+  padding: var(--padding);
+  border-radius: var(--rounded);
 }
-body .rgb-sliders .color, body .color-picker .color, .color-picker .rgb-sliders .color, .color-picker .color-picker .color {
+body .rgb-sliders .color, body .inputs .color {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding: var(--padding);
 }
-body .rgb-sliders .result, body .color-picker .result, .color-picker .rgb-sliders .result, .color-picker .color-picker .result {
-  padding: 25px;
-  color: #666;
-  display: flex;
-  flex-direction: column;
+body input[type=number]::-webkit-inner-spin-button,
+body input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+body input[type=number] {
+  -moz-appearance: textfield;
+  border: 0;
+  border-bottom: 1px solid #333;
+  width: 35px;
 }
 
 /*# sourceMappingURL=style.css.map */
