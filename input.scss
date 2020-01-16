@@ -25,10 +25,10 @@ body {
 		padding: var(--padding);
 		border-radius: var(--rounded);
 
-		.color {
+		.color-slider {
 			display: flex;
 			flex-direction: column;
-			align-items: center;
+			justify-content: flex-end;
 			padding: var(--padding);
 		}
 		

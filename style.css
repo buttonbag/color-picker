@@ -23,10 +23,10 @@ body .rgb-sliders, body .inputs {
   padding: var(--padding);
   border-radius: var(--rounded);
 }
-body .rgb-sliders .color, body .inputs .color {
+body .rgb-sliders .color-slider, body .inputs .color-slider {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: flex-end;
   padding: var(--padding);
 }
 body input[type=number]::-webkit-inner-spin-button,
