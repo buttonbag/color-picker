@@ -11,28 +11,26 @@
 
 body {
 	background: rgb(var(--r), var(--g), var(--b));
-}
-
-body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	
+}
+
 	.rgb-sliders, .inputs {
 		background: white;
 		margin: 10px auto;
 		padding: var(--padding);
 		border-radius: var(--rounded);
 
-		.color-slider {
-			display: flex;
-			flex-direction: column;
-			justify-content: flex-end;
-			padding: var(--padding);
-		}
 		
 	}
+			.color-slider {
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-end;
+				padding: var(--padding);
+			}
         
 	// .inputs {
 	// 	padding: var(--padding);
@@ -59,4 +57,4 @@ body {
 		border-bottom: 1px solid #333;
 		width: 35px;
 	}
-}
+

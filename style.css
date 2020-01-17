@@ -9,34 +9,35 @@
 
 body {
   background: rgb(var(--r), var(--g), var(--b));
-}
-
-body {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-body .rgb-sliders, body .inputs {
+
+.rgb-sliders, .inputs {
   background: white;
   margin: 10px auto;
   padding: var(--padding);
   border-radius: var(--rounded);
 }
-body .rgb-sliders .color-slider, body .inputs .color-slider {
+
+.color-slider {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   padding: var(--padding);
 }
-body input[type=number]::-webkit-inner-spin-button,
-body input[type=number]::-webkit-outer-spin-button {
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   margin: 0;
 }
-body input[type=number] {
+
+input[type=number] {
   -moz-appearance: textfield;
   border: 0;
   border-bottom: 1px solid #333;
