@@ -12,4 +12,4 @@
 - I need to figure out how to convert the Hex values into RGB or vice versa so that I can still display them in the same text input fields for a better user experience. 
 
 ## what I've learned:
-- console.log(parseInt(valStr).toString(16)); //converts to hex value by first changing to decimal then re-convert back to string.
+- parseInt(valStr).toString(16)); //converts to hex value by first changing to decimal then re-convert back to string.
