@@ -1,7 +1,7 @@
 const sliders = document.querySelectorAll('input[type="range"]');
 const inputs = document.querySelectorAll('input[type="number"]');
 const picker = document.querySelector('input[name="custom"]');
-const hexOut = document.querySelector('input.hex');
+const hexOut = document.querySelector('input[name="hex"]');
 
 function updateColor() {
 	const name = this.name;
@@ -35,11 +35,17 @@ function updateHex() { //change value of hex input field
 	hexOut.value = this.value.replace(/#/, '');
 
 	console.log('hex:', this.name, hexOut.value);
-
-
-	// parseInt(this.value).toString(16)); 
-		//converts to hex value by first changing to decimal then re-convert back to string.
 	
+	// document.querySelector('input[name="r"]').value = hexParser(0, 2); // need to assign new value to inputs
+	
+	console.log('r:', hexParser(0, 2));
+	console.log('g:', hexParser(2, 4));
+	console.log('b:', hexParser(4, 6));
+}
+
+function hexParser(a, b) {
+	//converts to hex value by first changing to decimal then re-convert back to string.
+	return parseInt(hexOut.value.slice(a, b), 16).toString();
 }
 
 picker.addEventListener('input', updateHex);
