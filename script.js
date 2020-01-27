@@ -18,6 +18,8 @@ function updateColor() {
 		sliders[i].value = inputs[i].value;
 	}
 
+	// ADD UP THE VALUES OF R+G+B AND INPUT IN HEX FIELD
+
 }
 
 // function customPicker() {
@@ -31,24 +33,29 @@ inputs.forEach( input => input.addEventListener('input', updateColor) );
 // textInput.forEach( textInput => textInput.addEventListener('input', updateColor) );
 // picker.forEach( picker => picker.addEventListener('change', customPicker) );
 	
-function updateHex() { //change value of hex input field
+function updateRGB() { //change value of RGB input fields	
 	hexOut.value = this.value.replace(/#/, '');
+	const rSegment = hexParser(0, 2);
+	const gSegment = hexParser(2, 4);
+	const bSegment = hexParser(4, 6);
 
 	console.log('hex:', this.name, hexOut.value);
 	
-	// document.querySelector('input[name="r"]').value = hexParser(0, 2); // need to assign new value to inputs
+	document.querySelector('input[type="number"].r').value = rSegment; // assign new value to inputs
+	document.querySelector('input[type="number"].g').value = gSegment; // assign new value to inputs
+	document.querySelector('input[type="number"].b').value = bSegment; // assign new value to inputs
 	
-	console.log('r:', hexParser(0, 2));
-	console.log('g:', hexParser(2, 4));
-	console.log('b:', hexParser(4, 6));
+	console.log('r:', rSegment);
+	console.log('g:', gSegment);
+	console.log('b:', bSegment);
 }
 
 function hexParser(a, b) {
-	//converts to hex value by first changing to decimal then re-convert back to string.
-	return parseInt(hexOut.value.slice(a, b), 16).toString();
+	//converts to hex value to decimal by segments.
+	return parseInt(hexOut.value.slice(a, b), 16);
 }
 
-picker.addEventListener('input', updateHex);
+picker.addEventListener('input', updateRGB);
 
 // todo
 // need to convert hex to decimal and pass through css variable
