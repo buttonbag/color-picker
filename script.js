@@ -8,18 +8,21 @@ function updateColor() {
 	const valStr = this.value;
 
 	console.log(`${name}`, valStr);
-
+	
 	document.documentElement.style.setProperty(`--${name}`, valStr);
 	
 	const results = document.querySelector(`input.${name}`);
 	results.value = `${valStr}`;
 	
 	for (let i = 0; i < sliders.length; i++) {
+		const hexFromRGB = parseInt(sliders[i].value).toString(16);
 		sliders[i].value = inputs[i].value;
+		console.log(i, hexFromRGB);
 	}
 
-	// ADD UP THE VALUES OF R+G+B AND INPUT IN HEX FIELD
-
+	// convert THE VALUES OF R+G+B AND INPUT IN HEX FIELD
+	// console.log("G: ", parseInt(('sliders[name="g"]').value).toString(16));
+	// console.log("B: ", parseInt(('sliders[name="b"]').value).toString(16));
 }
 
 // function customPicker() {
